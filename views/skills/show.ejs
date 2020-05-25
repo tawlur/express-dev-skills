@@ -8,8 +8,12 @@
 <body>
     <ol>
         <li>
-            <!-- <%= tyler.skill %> -->
+            <%= skill.skill %>
+            <%= skill.id %>
 
+           <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+                <button>Delete</button>
+           </form>
         </li>
     </ol>
 

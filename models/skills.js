@@ -1,4 +1,4 @@
-const Skill = require("../models/skills");
+
 const skills = [
     {id: 12345, skill: 'HTML'},
     {id: 23456, skill: 'Java'},
@@ -11,6 +11,7 @@ module.exports = {
     getAll,
     getOne,
     create,
+    deleteOne,
 }
 
 function getOne(id) {
@@ -21,6 +22,11 @@ function getAll() {
     return skills;
 }
 
-function create(skills) {
-    skills.push(Skill);
+function create(skill) {
+    skills.push(skill);
+}
+
+function deleteOne(id) {
+    const idx = skills.findIndex(skill => skill.id === parseInt(id));
+    skills.splice(idx, 1)
 }
