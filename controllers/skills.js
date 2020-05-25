@@ -1,8 +1,9 @@
-const Skill = require('../models/skills');
 
 module.exports = {
     index,
     show,
+    showNew,
+    newSkill,
 }
 
 function index(req, res, next) {
@@ -13,7 +14,15 @@ function index(req, res, next) {
 
 function show(req, res) {
     res.render('skills/show', {
-        skill: Skill.getOne(req.params.id),
+        tyler: Skill.getOne(req.params.id),
         skillNum: Skill.getAll().findIndex(skill => skill.id === parseInt(req.params.id)) + 1
     });
 }
+
+function showNew(req, res) {
+    res.render('skills/new')
+};
+
+function newSkill(req, res) {
+    res.render('skills/new')
+};

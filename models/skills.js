@@ -1,3 +1,4 @@
+const Skill = require("../models/skills");
 const skills = [
     {id: 12345, skill: 'HTML'},
     {id: 23456, skill: 'Java'},
@@ -9,6 +10,7 @@ const skills = [
 module.exports = {
     getAll,
     getOne,
+    create,
 }
 
 function getOne(id) {
@@ -17,4 +19,8 @@ function getOne(id) {
 
 function getAll() {
     return skills;
+}
+
+function create(skills) {
+    skills.push(Skill);
 }

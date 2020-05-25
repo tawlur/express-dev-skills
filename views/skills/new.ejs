@@ -9,16 +9,12 @@
     <a href="/">Home</a>
     <h1>Skills</h1>
     <ul>
-        <% skills.forEach(function(skill){ %>
-            <li>
-                <a href="/skills/<%= skill.id %>"><%= skills.skill %></a>
-        
-
-                
-            </li>
-
-        <%})%>
+        <h1>New Skill</h1>
+        <form action="/skills" method="POST">
+            <button type="submit" name="Skill">Save Skill</button>
+            <!-- <input type="text" name="todo"> -->
+            <input type="text">
+        </form>
     </ul>
-    <a href="/skills/new">New Skill</a>
 </body>
 </html>
