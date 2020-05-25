@@ -23,6 +23,7 @@ function getAll() {
 }
 
 function create(skill) {
+    skill.id = Date.now() % 1000000;
     skills.push(skill);
 }
 
