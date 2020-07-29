@@ -16,7 +16,7 @@ function index(req, res, next) {
 
 function show(req, res) {
   res.render("skills/show", {
-    skill: Skill.getOne(req.params.id)
+    skill: Skill.getOne(req.params.id),
     // skillNum:
     //   Skill.getAll().findIndex(
     //     (skill) => skill.id === parseInt(req.params.id)
@@ -29,13 +29,13 @@ function showNew(req, res) {
 }
 
 function newSkill(req, res) {
-    console.log(req.body)
+  console.log(req.body);
   Skill.create(req.body);
   res.redirect("/skills");
 }
 
 function deleteSkill(req, res) {
-    console.log(req.params.id)
-    Skill.deleteOne(req.params.id)
-    res.redirect("/skills");
+  console.log(req.params.id);
+  Skill.deleteOne(req.params.id);
+  res.redirect("/skills");
 }

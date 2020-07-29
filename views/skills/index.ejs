@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="/">Home</a>
     <h1>Skills</h1>
     <ul>
-        <% skills.forEach(function(skill){ %>
-            <li>
-                <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
-        
+      <% skills.forEach(function(skill){ %>
+      <li>
+        <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+      </li>
 
-                
-            </li>
-
-        <%})%>
+      <%})%>
     </ul>
     <a href="/skills/new">New Skill</a>
-</body>
+  </body>
 </html>
